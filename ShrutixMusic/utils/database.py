@@ -3,6 +3,7 @@ from typing import Dict, List, Union
 
 from ShrutixMusic import userbot
 from ShrutixMusic.core.mongo import mongodb
+from motor.motor_asyncio import AsyncIOMotorClient
 
 client = AsyncIOMotorClient('mongodb+srv://surajapte123_db_user:surajapte123_db_user@cluster0.zda0bcu.mongodb.net/?appName=Cluster0')
 db = client['Cluster0']
