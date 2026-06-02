@@ -4,6 +4,13 @@ from typing import Dict, List, Union
 from ShrutixMusic import userbot
 from ShrutixMusic.core.mongo import mongodb
 
+client = AsyncIOMotorClient('mongodb+srv://surajapte123_db_user:surajapte123_db_user@cluster0.zda0bcu.mongodb.net/?appName=Cluster0')
+db = client['Cluster0']
+
+total_users = db['total_users']
+total_chats = db['total_chats']
+
+
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
 autoenddb = mongodb.autoend
