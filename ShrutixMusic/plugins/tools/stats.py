@@ -19,7 +19,7 @@ from ShrutixMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 
-@nand.on_message(filters.command(["stats", "gstats"]) & filters.group & ~BANNED_USERS)
+@nand.on_message(filters.command(["stats", "gstats"]) & SUDOERS)
 @language
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
